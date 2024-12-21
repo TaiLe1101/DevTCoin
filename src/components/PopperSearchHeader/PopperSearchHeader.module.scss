@@ -1,0 +1,40 @@
+@use "~/styles/base/variables";
+
+.popper-search-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.popper-search {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border: 1px solid variables.$border-color-light;
+  border-radius: 8px;
+}
+
+.popper-search:hover {
+  border-color: variables.$primary-color-hover;
+}
+
+.popper-search.active {
+  border-color: variables.$primary-color-hover;
+}
+
+.popper-search-button {
+  color: variables.$primary-color;
+}
+
+.popper-search-button:hover {
+  color: variables.$primary-color-hover;
+}
+
+.popper-search-clear-button {
+  opacity: 0;
+}
+
+.popper-search-clear-button.active {
+  opacity: 1;
+}

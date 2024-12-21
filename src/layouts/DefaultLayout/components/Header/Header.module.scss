@@ -1,0 +1,115 @@
+@use "~/styles/base/variables";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav {
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-item {
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  transition: unset;
+}
+
+.nav-link:hover {
+  color: variables.$primary-color-hover;
+}
+
+.nav-icon {
+  transition: 0.3s;
+}
+
+.nav-link:hover .nav-icon {
+  transform: rotate(-180deg);
+}
+
+.popper-trade-wrap {
+  max-width: 608px;
+
+  display: flex;
+  align-items: start;
+  gap: 16px;
+}
+
+.popper-trade-title {
+  font-weight: 600;
+  color: variables.$text-color-secondary-light;
+
+  margin-bottom: 20px;
+}
+
+.popper-trade-content {
+  display: flex;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 32px;
+
+  cursor: pointer;
+}
+
+.popper-trade-content:last-child {
+  margin-bottom: 0;
+}
+
+.popper-trade-content:hover .popper-trade-text-icon {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.popper-trade-text-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: variables.$text-color-light;
+}
+
+.popper-trade-text-icon {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+
+  transition: 0.3s;
+}
+
+.popper-trade-text-desc {
+  font-size: 12px;
+  color: variables.$text-color-third-light;
+}
+
+.right-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-button:hover {
+  color: variables.$primary-color-hover;
+}
+
+.right-button.active {
+  color: variables.$primary-color-hover;
+}

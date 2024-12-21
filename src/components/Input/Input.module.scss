@@ -1,0 +1,92 @@
+@use "~/styles/base/variables";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wrap-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  max-height: 48px;
+  border: 1px solid variables.$border-color-light;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.wrap-input.active,
+.wrap-input:hover {
+  border-color: variables.$primary-color-hover;
+}
+
+.wrap-input.error {
+  border-color: variables.$color-error;
+  background-color: rgba(variables.$color-error, 0.05);
+}
+
+.wrap-input.disabled {
+  background-color: variables.$color-vessel;
+}
+
+.wrap-input.disabled .input {
+  pointer-events: none;
+}
+
+.input {
+  //   width: 100%;
+  flex: 1;
+  font-size: 16px;
+  height: calc(48px - 24px);
+}
+
+.input::placeholder {
+  color: variables.$color-placeholder;
+  font-weight: 700;
+}
+
+.right-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.label {
+  user-select: none;
+}
+
+.error {
+  color: variables.$color-error;
+}
+
+.btn-clear-right.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn-clear-right {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: variables.$border-color-light;
+}
+
+.btn-clear-icon {
+  transition: all 0.3s;
+}
+
+.btn-clear-right:hover .btn-clear-icon {
+  color: variables.$color-error;
+}

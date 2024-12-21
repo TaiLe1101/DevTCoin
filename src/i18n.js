@@ -9,7 +9,7 @@ i18n
   .use(LanguageDetector) // Phát hiện ngôn ngữ
   .use(initReactI18next) // Tích hợp với React
   .init({
-    fallbackLng: "vi", // Ngôn ngữ mặc định
+    fallbackLng: "en", // Ngôn ngữ mặc định
     debug: true, // Bật log cho dev
     interpolation: {
       escapeValue: false, // React đã tự xử lý XSS

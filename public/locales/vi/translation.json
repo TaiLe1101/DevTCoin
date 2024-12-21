@@ -1,8 +1,9 @@
 {
   "app_name": "DevTCoin",
   "welcome": "Chào mừng đến với trang web của chúng tôi",
-  "home": "Trang chủ",
+  "title_home": "Sàn giao dịch số một VN",
   "login": "Đăng nhập",
   "not_fund": "Trang không tồn tại",
-  "user_profile": "Trang cá nhân"
+  "user_profile": "Trang cá nhân",
+  "buy_crypto": "Mua Crypto"
 }

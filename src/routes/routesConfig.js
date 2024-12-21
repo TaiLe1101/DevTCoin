@@ -1,32 +1,96 @@
+import { ROUTES } from "~/constants/routes";
 import DefaultLayout from "~/layouts/DefaultLayout/DefaultLayout";
 import LoginLayout from "~/layouts/LoginLayout/LoginLayout";
+import Buy from "~/pages/Crypto/Buy/Buy";
 import NotFund from "~/pages/Error/NotFund/NotFund";
 import Home from "~/pages/Home/Home";
 import Login from "~/pages/Login/Login";
+import Markets from "~/pages/Markets/Markets";
+import Privacy from "~/pages/Privacy/Privacy";
+import InputOTP from "~/pages/SignUp/InputOTP";
+import InputPassword from "~/pages/SignUp/InputPassword";
+import SignUp from "~/pages/SignUp/SignUp";
+import Terms from "~/pages/Terms/Terms";
 import Profile from "~/pages/User/Profile/Profile";
 
 const routesConfig = [
   {
-    path: "/",
-    title: "home",
+    path: ROUTES.HOME,
+    title: "title_home",
     name: "home",
     layout: DefaultLayout,
     component: Home,
     private: false,
   },
   {
-    path: "/user/profile/:userId", // này sẽ là /user/profile/:userId chứ không phải User là layout
+    path: "/user/profile/:userId",
     title: "user_profile",
     name: "user-profile",
     component: Profile,
     private: true,
   },
   {
-    path: "/login",
+    path: ROUTES.LOG_IN,
     title: "login",
     name: "login",
     layout: LoginLayout,
     component: Login,
+    private: false,
+  },
+  {
+    path: ROUTES.SIGN_UP,
+    title: "sign_up",
+    name: "sign-up",
+    layout: LoginLayout,
+    component: SignUp,
+    private: false,
+  },
+  {
+    path: ROUTES.SIGN_UP_OTP,
+    title: "sign_up_opt",
+    name: "sign-up-otp",
+    layout: LoginLayout,
+    component: InputOTP,
+    private: false,
+  },
+  {
+    path: ROUTES.SIGN_UP_PASSWORD,
+    title: "sign_up_password",
+    name: "sign-up-password",
+    layout: LoginLayout,
+    component: InputPassword,
+    private: false,
+  },
+  {
+    path: ROUTES.CRYPTO_BUY,
+    title: "title_crypto_buy",
+    name: "crypto",
+    layout: DefaultLayout,
+    component: Buy,
+    private: false,
+  },
+  {
+    path: ROUTES.TERMS,
+    title: "terms",
+    name: "terms",
+    layout: DefaultLayout,
+    component: Terms,
+    private: false,
+  },
+  {
+    path: ROUTES.PRIVACY,
+    title: "privacy",
+    name: "privacy",
+    layout: DefaultLayout,
+    component: Privacy,
+    private: false,
+  },
+  {
+    path: ROUTES.MARKETS,
+    title: "market",
+    name: "market",
+    layout: DefaultLayout,
+    component: Markets,
     private: false,
   },
   {

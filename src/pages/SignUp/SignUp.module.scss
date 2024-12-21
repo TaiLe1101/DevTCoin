@@ -1,0 +1,217 @@
+@use "~/styles/base/variables";
+
+$width-wrap: 345px;
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup {
+  max-width: 425px;
+  width: $width-wrap;
+  border-radius: 24px;
+  border: 1px solid variables.$border-color-light;
+  padding: 40px;
+}
+
+.signup-heading {
+  margin-bottom: 24px;
+}
+
+.signup-heading-img {
+  width: 140px;
+  height: 28px;
+  object-fit: cover;
+}
+
+.signup-subheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.signup-subheading-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.signup-subheading-button {
+  border-radius: 8px;
+  background-color: variables.$color-vessel;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-subheading-button:hover {
+  background-color: variables.$border-color-light;
+}
+
+.signup-form {
+  margin-bottom: 24px;
+}
+
+.signup-form-label {
+  display: block;
+  margin-bottom: 8px;
+
+  user-select: none;
+}
+
+.signup-form-input {
+  display: block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid variables.$border-color-light;
+  width: 100%;
+  max-width: calc($width-wrap - 32px);
+  font-size: 16px;
+  line-height: calc(48px - 24px);
+  font-weight: 600;
+}
+
+.signup-form-input::placeholder {
+  color: variables.$color-placeholder;
+}
+
+.signup-form-input:hover,
+.signup-form-input:focus {
+  border-color: variables.$primary-color-hover;
+}
+
+.signup-button {
+  text-align: center;
+  width: 100%;
+  line-height: 48px;
+  font-size: 16px;
+  background-color: variables.$primary-color;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.signup-button.loading {
+  opacity: 0.8;
+}
+
+.signup-form-checkbox {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+
+.signup-form-checkbox-wrap {
+  margin-top: 3px;
+}
+
+.signup-form-input-checkbox {
+  appearance: none; /* Loại bỏ giao diện mặc định */
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid variables.$border-color-light;
+  cursor: pointer;
+  position: relative;
+}
+
+.signup-form-input-checkbox:checked {
+  background-color: #000000;
+  border-color: #000000;
+  color: white;
+}
+
+.signup-form-input-checkbox:checked::before {
+  content: "";
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 2px;
+  height: 6px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.signup-form-label-link {
+  padding-bottom: 4px;
+  border-bottom: 1px dotted variables.$border-color-light;
+}
+
+.signup-form-label-link:hover {
+  color: variables.$primary-color-hover;
+  border-color: variables.$primary-color-hover;
+}
+
+.signup-form-label-checkbox {
+  max-width: 315px;
+  font-weight: 400;
+  color: #202630;
+}
+
+.signup-subheading-desc {
+  margin-bottom: 24px;
+  color: variables.$text-description;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.signup-from-input-custom {
+  max-width: calc($width-wrap - 32px);
+  margin-bottom: 24px;
+}
+
+.signup-input-otp-resend {
+  color: variables.$primary-color;
+}
+
+.signup-input-otp-resend:hover {
+  color: variables.$primary-color-hover;
+}
+
+.password-rules-wrap {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.password-rules-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.password-rules-item.success .password-rules-item-text,
+.password-rules-item.success .password-rules-item-icon {
+  color: variables.$color-success;
+}
+
+.password-rules-item.error .password-rules-item-text,
+.password-rules-item.error .password-rules-item-icon {
+  color: variables.$color-error;
+}
+
+.password-rules-item-icon {
+  color: variables.$secondary-color;
+  margin-top: 4px;
+}
+
+.password-rules-item-text {
+  color: variables.$text-description;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.signup-input-visible-password:hover {
+  color: variables.$primary-color-hover;
+}
+
+.sign-input {
+  max-width: calc($width-wrap - 32px);
+}

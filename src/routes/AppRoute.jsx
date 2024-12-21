@@ -71,7 +71,7 @@ const RouteWithTitle = ({ title, appName, children }) => {
 
   useEffect(() => {
     // Cập nhật document.title khi location thay đổi
-    document.title = `${appName} | ${title}`;
+    document.title = `${appName} - ${title}`;
   }, [appName, location, title]);
 
   return <>{children}</>;
