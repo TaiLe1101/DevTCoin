@@ -21,13 +21,13 @@ function InputOTP() {
     <div className={cx("wrap")}>
       <div className={cx("signup")}>
         <div className={cx("signup-heading")}>
-          <Link to={ROUTES.HOME}>
+          <a href={ROUTES.HOME}>
             <img
               className={cx("signup-heading-img")}
               src="/images/logo.png"
               alt="logo"
             />
-          </Link>
+          </a>
         </div>
         <div className={cx("signup-subheading")}>
           <p className={cx("signup-subheading-title")}>

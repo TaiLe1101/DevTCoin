@@ -69,7 +69,6 @@ $width-wrap: 345px;
   border-radius: 12px;
   border: 1px solid variables.$border-color-light;
   width: 100%;
-  max-width: calc($width-wrap - 32px);
   font-size: 16px;
   line-height: calc(48px - 24px);
   font-weight: 600;
@@ -92,4 +91,21 @@ $width-wrap: 345px;
   background-color: variables.$primary-color;
   border-radius: 12px;
   padding: 0 15px;
+}
+
+.login-input {
+  max-width: calc($width-wrap - 32px);
+  margin-bottom: 16px;
+}
+
+.login-input:last-child {
+  margin-bottom: 0;
+}
+
+.signup-input-visible-password:hover {
+  color: variables.$primary-color-hover;
+}
+
+.login-button.loading {
+  opacity: 0.8;
 }

@@ -21,18 +21,16 @@ function SignUp() {
     <div className={cx("wrap")}>
       <div className={cx("signup")}>
         <div className={cx("signup-heading")}>
-          <Link to={ROUTES.HOME}>
+          <a href={ROUTES.HOME}>
             <img
               className={cx("signup-heading-img")}
               src="/images/logo.png"
               alt="logo"
             />
-          </Link>
+          </a>
         </div>
         <div className={cx("signup-subheading")}>
-          <p className={cx("signup-subheading-title")}>
-            {t("welcome_to_binance")}
-          </p>
+          <p className={cx("signup-subheading-title")}>{t("welcome_to_app")}</p>
         </div>
 
         <Input
@@ -59,7 +57,7 @@ function SignUp() {
               htmlFor="chkConfirmRules"
               className={cx("signup-form-label", "signup-form-label-checkbox")}
             >
-              {t("by_creating_an_account_i_agree_to_binance_s")}{" "}
+              {t("by_creating_an_account_i_agree_to_app")}{" "}
               <Link
                 target="_blank"
                 to={ROUTES.TERMS}

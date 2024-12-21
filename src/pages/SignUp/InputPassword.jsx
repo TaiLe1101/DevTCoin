@@ -15,7 +15,7 @@ const cx = classNames.bind(styles);
 function InputPassword() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const [loadingBtnEmailNext, setLoadingBtnEmailNext] = useState(false);
+  const [loadingBtnNext, setLoadingBtnEmailNext] = useState(false);
   const [otp, setOtp] = useState("");
   const [password, setPassword] = useState("");
   const [isVisiblePassword, setIsVisiblePassword] = useState(false);
@@ -55,13 +55,13 @@ function InputPassword() {
     <div className={cx("wrap")}>
       <div className={cx("signup")}>
         <div className={cx("signup-heading")}>
-          <Link to={ROUTES.HOME}>
+          <a href={ROUTES.HOME}>
             <img
               className={cx("signup-heading-img")}
               src="/images/logo.png"
               alt="logo"
             />
-          </Link>
+          </a>
         </div>
         <div className={cx("signup-subheading")}>
           <p className={cx("signup-subheading-title")}>
@@ -71,7 +71,7 @@ function InputPassword() {
 
         <Input
           type={isVisiblePassword ? "text" : "password"}
-          isDisabled={loadingBtnEmailNext}
+          isDisabled={loadingBtnNext}
           value={password}
           label={t("password")}
           className={cx("signup-from-input-custom")}
@@ -80,9 +80,9 @@ function InputPassword() {
           customRightButton={
             <button
               className={cx("signup-input-visible-password")}
-              disabled={loadingBtnEmailNext}
+              disabled={loadingBtnNext}
               style={{
-                cursor: loadingBtnEmailNext ? "not-allowed" : "pointer",
+                cursor: loadingBtnNext ? "not-allowed" : "pointer",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -133,7 +133,7 @@ function InputPassword() {
         <Input
           type={isVisibleConfirmPassword ? "text" : "password"}
           btnClearRight
-          isDisabled={loadingBtnEmailNext}
+          isDisabled={loadingBtnNext}
           value={confirmPassword}
           label={t("confirm_password")}
           className={cx("signup-from-input-custom")}
@@ -141,9 +141,9 @@ function InputPassword() {
           customRightButton={
             <button
               className={cx("signup-input-visible-password")}
-              disabled={loadingBtnEmailNext}
+              disabled={loadingBtnNext}
               style={{
-                cursor: loadingBtnEmailNext ? "not-allowed" : "pointer",
+                cursor: loadingBtnNext ? "not-allowed" : "pointer",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -180,16 +180,16 @@ function InputPassword() {
         </div>
 
         <button
-          className={cx("signup-button", { loading: loadingBtnEmailNext })}
-          disabled={loadingBtnEmailNext}
+          className={cx("signup-button", { loading: loadingBtnNext })}
+          disabled={loadingBtnNext}
           onClick={() => {
-            setLoadingBtnEmailNext(!loadingBtnEmailNext);
+            setLoadingBtnEmailNext(!loadingBtnNext);
             setTimeout(() => {
               navigate(ROUTES.HOME);
             }, 1000);
           }}
         >
-          {loadingBtnEmailNext ? (
+          {loadingBtnNext ? (
             <Lottie
               animationData={loadingBtnLottie}
               loop={true}
