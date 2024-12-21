@@ -1,4 +1,5 @@
-import Tippy from "@tippyjs/react/headless";
+import Tippy from "@tippyjs/react";
+import TippyHeadless from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
 import {
   ArrowRight,
@@ -15,6 +16,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Button from "~/components/Button/Button";
 import PopperWrapper from "~/components/Popper/Wrapper/Wrapper";
+import PopperChange from "~/components/PopperChange/PopperChange";
 import PopperSearchHeader from "~/components/PopperSearchHeader/PopperSearchHeader";
 import { ROUTES } from "~/constants/routes";
 import styles from "./Header.module.scss";
@@ -51,7 +53,7 @@ export default function Header() {
               </Link>
             </li>
             <li className={cx("nav-item")}>
-              <Tippy
+              <TippyHeadless
                 interactive={true}
                 hideOnClick={false}
                 render={(attrs) => (
@@ -166,10 +168,10 @@ export default function Header() {
                   {t("trade")}{" "}
                   <CaretDown size={14} className={cx("nav-icon")} />
                 </Link>
-              </Tippy>
+              </TippyHeadless>
             </li>
             <li className={cx("nav-item")}>
-              <Tippy
+              <TippyHeadless
                 hideOnClick={false}
                 interactive={true}
                 render={(attrs) => (
@@ -284,7 +286,7 @@ export default function Header() {
                   {t("futures")}{" "}
                   <CaretDown size={14} className={cx("nav-icon")} />
                 </Link>
-              </Tippy>
+              </TippyHeadless>
             </li>
             <li className={cx("nav-item")}>
               <Link to={ROUTES.CRYPTO_BUY} className={cx("nav-link")}>
@@ -292,7 +294,7 @@ export default function Header() {
               </Link>
             </li>
             <li className={cx("nav-item")}>
-              <Tippy
+              <TippyHeadless
                 hideOnClick={false}
                 interactive={true}
                 render={(attrs) => (
@@ -407,10 +409,10 @@ export default function Header() {
                   {t("square")}{" "}
                   <CaretDown size={14} className={cx("nav-icon")} />
                 </Link>
-              </Tippy>
+              </TippyHeadless>
             </li>
             <li className={cx("nav-item")}>
-              <Tippy
+              <TippyHeadless
                 hideOnClick={false}
                 interactive={true}
                 render={(attrs) => (
@@ -524,14 +526,15 @@ export default function Header() {
                 <Link to={"#"} className={cx("nav-link")}>
                   {t("more")} <CaretDown size={14} className={cx("nav-icon")} />
                 </Link>
-              </Tippy>
+              </TippyHeadless>
             </li>
           </ul>
         </nav>
       </div>
+
       <div className={cx("right")}>
         <div className={cx("right-wrap")}>
-          <Tippy
+          <TippyHeadless
             visible={activeSearch}
             interactive={true}
             placement="bottom-start"
@@ -553,22 +556,63 @@ export default function Header() {
             >
               <MagnifyingGlass size={24} weight="bold" />
             </button>
-          </Tippy>
+          </TippyHeadless>
           <Button type="link" variant="secondary" to={ROUTES.LOG_IN}>
             {t("log_in")}
           </Button>
           <Button type="link" to={ROUTES.SIGN_UP}>
             {t("sign_up")}
           </Button>
-          <button className={cx("right-button")}>
-            <DownloadSimple size={24} weight="bold" />
-          </button>
-          <button className={cx("right-button")}>
-            <Globe size={24} weight="bold" />
-          </button>
-          <button className={cx("right-button")}>
-            <Sun size={24} weight="bold" />
-          </button>
+
+          <TippyHeadless
+            interactive={true}
+            render={(attrs) => (
+              <PopperWrapper attrs={attrs}>
+                <div className={cx("popper-download-app")}>
+                  <div className={cx("popper-download-app-qr")}>
+                    <img
+                      className={cx("popper-download-app-qr-img")}
+                      src="/images/qr.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p className={cx("popper-download-app-desc")}>
+                    {t("scan_to_download_app_i_os_android")}
+                  </p>
+                  <Button
+                    type="link"
+                    to={ROUTES.DOWNLOAD}
+                    className={cx("popper-download-app-btn")}
+                  >
+                    {t("more_down_options")}
+                  </Button>
+                </div>
+              </PopperWrapper>
+            )}
+          >
+            <button className={cx("right-button")}>
+              <DownloadSimple size={24} weight="bold" />
+            </button>
+          </TippyHeadless>
+
+          <TippyHeadless
+            interactive={true}
+            render={(attrs) => (
+              <PopperWrapper attrs={attrs}>
+                <PopperChange />
+              </PopperWrapper>
+            )}
+          >
+            <button className={cx("right-button")}>
+              <Globe size={24} weight="bold" />
+            </button>
+          </TippyHeadless>
+
+          <Tippy content={t("change_theme")}>
+            <button className={cx("right-button")}>
+              <Sun size={24} weight="bold" />
+            </button>
+          </Tippy>
         </div>
       </div>
     </div>

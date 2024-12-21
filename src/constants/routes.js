@@ -8,4 +8,5 @@ export const ROUTES = {
   PRIVACY: "/privacy",
   MARKETS: "/markets",
   CRYPTO_BUY: "/crypto/buy",
+  DOWNLOAD: "/download",
 };

@@ -5,7 +5,7 @@ import styles from "./Button.module.scss";
 
 const cx = classNames.bind(styles);
 
-function ButtonPrimary({
+function Button({
   children,
   className,
   type = "button",
@@ -37,4 +37,4 @@ function ButtonPrimary({
   );
 }
 
-export default ButtonPrimary;
+export default Button;

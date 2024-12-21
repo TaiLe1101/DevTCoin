@@ -1,0 +1,103 @@
+@use "~/styles/base/variables";
+
+.popper-lang-wrap {
+  min-width: 400px;
+  display: flex;
+  gap: 16px;
+  max-height: calc(418px - 48px);
+  min-height: calc(418px - 48px);
+  overflow: hidden;
+}
+
+.popper-lang-left {
+  width: calc(60% - 8px);
+}
+
+.popper-lang-title {
+  color: variables.$text-color-secondary-light;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.popper-lang-search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  border: 1px solid variables.$border-color-light;
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+}
+
+.popper-lang-input {
+  flex: 1;
+  width: 100%;
+}
+
+.popper-lang-clear-input {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: variables.$border-color-light;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.popper-lang-clear-input.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.popper-lang-clear-input:hover {
+  background-color: variables.$color-error;
+}
+
+.popper-lang-clear-input:hover .popper-lang-clear-input-icon {
+  color: variables.$color-vessel;
+}
+
+.popper-lang-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+
+  overflow-y: auto;
+  max-height: calc(100% - 100px);
+
+  padding: 0 4px;
+  margin: 0 4px;
+}
+
+.popper-lang-list::-webkit-scrollbar {
+  width: 4px;
+  transition: all 0.3s;
+}
+
+.popper-lang-list::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: variables.$border-color-light;
+}
+
+.popper-lang-item {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.popper-lang-item:hover {
+  color: variables.$primary-color-hover;
+}
+
+.popper-lang-right {
+  width: calc(40% - 8px);
+}

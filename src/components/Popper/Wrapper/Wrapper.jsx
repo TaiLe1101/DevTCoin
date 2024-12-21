@@ -4,8 +4,12 @@ import styles from "./Wrapper.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Wrapper({ children }) {
-  return <div className={cx("wrap")}>{children}</div>;
+function Wrapper({ children, attrs }) {
+  return (
+    <div {...attrs} className={cx("wrap")}>
+      {children}
+    </div>
+  );
 }
 
 export default Wrapper;

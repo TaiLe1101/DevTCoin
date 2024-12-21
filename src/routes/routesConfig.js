@@ -2,6 +2,7 @@ import { ROUTES } from "~/constants/routes";
 import DefaultLayout from "~/layouts/DefaultLayout/DefaultLayout";
 import LoginLayout from "~/layouts/LoginLayout/LoginLayout";
 import Buy from "~/pages/Crypto/Buy/Buy";
+import Download from "~/pages/Download/Download";
 import NotFund from "~/pages/Error/NotFund/NotFund";
 import Home from "~/pages/Home/Home";
 import Login from "~/pages/Login/Login";
@@ -91,6 +92,14 @@ const routesConfig = [
     name: "market",
     layout: DefaultLayout,
     component: Markets,
+    private: false,
+  },
+  {
+    path: ROUTES.DOWNLOAD,
+    title: "download",
+    name: "download",
+    layout: DefaultLayout,
+    component: Download,
     private: false,
   },
   {

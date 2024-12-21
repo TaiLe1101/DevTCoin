@@ -40,11 +40,15 @@
   "password_minimum_6_characters": "Mật khẩu phải có ít nhất 6 ký tự",
   "password_must_contain_characters": "Mật khẩu phải chứa (!,@,#,$,%,^,&,*,?)",
   "password_matches": "Mật khẩu phải trùng khớp",
-
   "sign_up_opt": "Xác nhận OTP",
   "sign_up_password": "Tạo mật khẩu",
   "title_crypto_buy": "Mua Crypto",
   "terms": "Điều khoản dịch vụ",
   "privacy": "Chính sách bảo mật",
-  "market": "Thị trường"
+  "market": "Thị trường",
+  "scan_to_download_app_i_os_android": "Sử dụng điện thoại để quét mã",
+  "more_down_options": "Phương thức tải khác",
+  "lang": "Ngôn ngữ",
+  "currency": "Tiền tệ",
+  "change_theme": "Đổi chủ đề"
 }

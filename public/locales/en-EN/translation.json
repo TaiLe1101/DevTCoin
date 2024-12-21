@@ -1,8 +1,10 @@
 {
   "welcome": "Welcome to our application",
   "home": "Home",
+  "title_home": "Number one trading floor in Vietnam",
   "login": "Login",
   "user_profile": "User Profile",
+  "buy_crypto": "Buy Crypto",
   "basic": "Basic",
   "spot": "Spot",
   "markets": "Markets",
@@ -35,5 +37,16 @@
   "please_enter_your_password_again": "Please enter your password again",
   "password_minimum_6_characters": "Password must be at least 6 characters",
   "password_must_contain_characters": "Password must contain (!,@,#,$,%,^,&,*,?)",
-  "password_matches": "Passwords must match"
+  "password_matches": "Passwords must match",
+  "sign_up_opt": "Sign Up Otp",
+  "sign_up_password": "Sign Up Password",
+  "title_crypto_buy": "Buy Crypto",
+  "terms": "Terms",
+  "privacy": "Privacy",
+  "market": "Markets",
+  "scan_to_download_app_i_os_android": "Scan to download app IOS/Android",
+  "more_down_options": "More down options",
+  "lang": "Language",
+  "currency": "Currency",
+  "change_theme": "Change Theme"
 }

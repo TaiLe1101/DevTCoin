@@ -113,3 +113,31 @@
 .right-button.active {
   color: variables.$primary-color-hover;
 }
+
+.popper-download-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.popper-download-app-qr {
+  width: 136px;
+  height: 136px;
+}
+
+.popper-download-app-qr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popper-download-app-desc {
+  width: 90%;
+  text-align: center;
+}
+
+.popper-download-app-btn {
+  width: 100%;
+}

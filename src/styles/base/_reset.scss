@@ -56,3 +56,13 @@ button:focus {
 input {
   cursor: text;
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: variables.$border-color-light;
+}
