@@ -4,7 +4,7 @@ export default function DefaultLayout({ children }) {
   return (
     <>
       <Header />
-      <main style={{ minHeight: "110vh" }}>{children}</main>
+      <main style={{ marginTop: 64 }}>{children}</main>
     </>
   );
 }

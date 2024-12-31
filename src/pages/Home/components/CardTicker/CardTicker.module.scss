@@ -1,0 +1,66 @@
+@use "~/styles/base/variables";
+
+.wrap {
+  border-radius: 20px;
+  background-color: variables.$color-vessel;
+  padding: 12px 24px 20px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: calc(480px - 48px);
+  min-width: calc(480px - 48px);
+  margin-bottom: 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-item {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0;
+  color: variables.$color-placeholder;
+
+  position: relative;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  transform: translateX(-50%);
+
+  display: block;
+  width: 0px;
+  height: 4px;
+  background-color: variables.$primary-color;
+  transition: width 0.3s;
+}
+
+.nav-item.active {
+  color: variables.$text-color-light;
+}
+
+.nav-item.active::after {
+  width: 16px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 400;
+  color: variables.$secondary-color;
+}
+
+.nav-link:hover {
+  color: variables.$text-color-light;
+}

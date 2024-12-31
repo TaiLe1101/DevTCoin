@@ -87,6 +87,10 @@
   transition: all 0.3s;
 }
 
+.btn-clear-right:hover {
+  background-color: variables.$color-error;
+}
+
 .btn-clear-right:hover .btn-clear-icon {
-  color: variables.$color-error;
+  color: variables.$color-vessel;
 }

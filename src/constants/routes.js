@@ -9,4 +9,5 @@ export const ROUTES = {
   MARKETS: "/markets",
   CRYPTO_BUY: "/crypto/buy",
   DOWNLOAD: "/download",
+  FUTURES: "/futures",
 };

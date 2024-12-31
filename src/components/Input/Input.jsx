@@ -4,6 +4,7 @@ import styles from "./Input.module.scss";
 import { X } from "phosphor-react";
 import { useState } from "react";
 import { useId } from "react";
+import { useRef } from "react";
 
 const cx = classNames.bind(styles);
 
@@ -14,6 +15,7 @@ function Input({
   btnClearRight,
   style,
   className,
+  classNameWrapInput,
   customRightButton,
   value = "",
   labelStyle,
@@ -25,6 +27,7 @@ function Input({
 
   onChange = () => {},
 }) {
+  const inputRef = useRef(null);
   const id = useId();
   const [isFocus, setIsFocus] = useState(false);
 
@@ -40,13 +43,14 @@ function Input({
         </label>
       )}
       <div
-        className={cx("wrap-input", {
+        className={cx("wrap-input", classNameWrapInput, {
           active: isFocus,
           error: isError,
           disabled: isDisabled,
         })}
       >
         <input
+          ref={inputRef}
           id={id}
           name={name}
           type={type}
@@ -63,7 +67,10 @@ function Input({
           {btnClearRight && (
             <button
               className={cx("btn-clear-right", { active: value })}
-              onClick={() => onChange("")}
+              onClick={() => {
+                inputRef.current.focus();
+                onChange("");
+              }}
             >
               <X className={cx("btn-clear-icon")} size={12} weight="fill" />
             </button>

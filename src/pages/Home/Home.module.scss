@@ -1,0 +1,51 @@
+@use "~/styles/base/variables";
+
+.section-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-1-left {
+}
+
+.section-1-heading-wrap {
+}
+
+.section-1-heading-count {
+}
+
+.section-1-heading-count-up {
+  font-size: 84px;
+  color: variables.$primary-color-hover;
+  font-weight: 700;
+}
+
+.section-1-heading-count-up-text {
+  font-size: 84px;
+  font-weight: 700;
+}
+
+.section-1-heading-input-register-wrap {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-1-heading-input-register-control-wrap {
+  width: 100%;
+}
+
+.section-1-heading-input-register-control {
+  max-width: calc(100% - 32px);
+}
+
+.section-1-heading-input-register-control-wrap > span {
+  display: none;
+}
+
+.section-1-heading-input-register-btn {
+  min-width: 180px;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: 600;
+}

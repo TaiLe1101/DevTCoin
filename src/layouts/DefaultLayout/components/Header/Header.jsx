@@ -181,9 +181,12 @@ export default function Header() {
                         <p className={cx("popper-trade-title")}>{t("basic")}</p>
                         <div className={cx("popper-trade-content")}>
                           <Dog size={20} className={cx("popper-trade-icon")} />
-                          <div className={cx("popper-trade-text")}>
+                          <Link
+                            to={ROUTES.FUTURES}
+                            className={cx("popper-trade-text")}
+                          >
                             <p className={cx("popper-trade-text-title")}>
-                              {t("spot")}
+                              {t("futures")}
                               <ArrowRight
                                 size={14}
                                 weight="bold"
@@ -196,7 +199,7 @@ export default function Header() {
                                 "buy_and_sell_on_the_spot_market_with_advanced_tools"
                               )}
                             </p>
-                          </div>
+                          </Link>
                         </div>
                         <div className={cx("popper-trade-content")}>
                           <Dog size={20} className={cx("popper-trade-icon")} />

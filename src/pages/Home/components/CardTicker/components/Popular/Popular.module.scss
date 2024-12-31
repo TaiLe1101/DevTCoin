@@ -1,0 +1,39 @@
+@use "~/styles/base/variables";
+
+.ticker-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticker-symbol {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ticker-price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ticker-volume {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ticker-volume.up {
+  color: variables.$color-success;
+}
+
+.ticker-volume.down {
+  color: variables.$color-error;
+}

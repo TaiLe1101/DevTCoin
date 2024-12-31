@@ -4,6 +4,7 @@ import LoginLayout from "~/layouts/LoginLayout/LoginLayout";
 import Buy from "~/pages/Crypto/Buy/Buy";
 import Download from "~/pages/Download/Download";
 import NotFund from "~/pages/Error/NotFund/NotFund";
+import Futures from "~/pages/Futures/Futures";
 import Home from "~/pages/Home/Home";
 import Login from "~/pages/Login/Login";
 import Markets from "~/pages/Markets/Markets";
@@ -100,6 +101,14 @@ const routesConfig = [
     name: "download",
     layout: DefaultLayout,
     component: Download,
+    private: false,
+  },
+  {
+    path: ROUTES.FUTURES,
+    title: "futures",
+    name: "futures",
+    layout: DefaultLayout,
+    component: Futures,
     private: false,
   },
   {
